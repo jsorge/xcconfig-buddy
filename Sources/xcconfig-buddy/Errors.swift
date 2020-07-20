@@ -5,4 +5,5 @@ enum XCConfigError: Error {
     case notXcconfig
     case unreadableFile
     case unwritableFile
+    case settingNotFound
 }

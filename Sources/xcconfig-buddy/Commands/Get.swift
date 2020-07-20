@@ -29,12 +29,12 @@ extension XcconfigBuddy {
 
                 let output = text
                     .split(separator: "=")
-                    .map({ String($0) })
+                    .map { String($0) }
                     .last?
                     .trimmingCharacters(in: .whitespaces)
 
                 guard let echo = output else {
-                    return
+                    throw XCConfigError.settingNotFound
                 }
 
                 print(echo)
