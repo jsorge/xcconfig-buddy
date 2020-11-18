@@ -19,7 +19,8 @@ extension XcconfigBuddy {
 
         mutating func run() throws {
             let get = GetConfigValue(caseSensitive: caseSensitive, filePath: filePath, setting: setting)
-            try get.run()
+            let output = try get.run()
+            print(output)
         }
     }
 }

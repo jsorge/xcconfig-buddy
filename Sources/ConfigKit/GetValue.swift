@@ -11,7 +11,7 @@ public struct GetConfigValue {
         self.setting = setting
     }
 
-    public func run() throws {
+    public func run() throws -> String {
         let url = URL(fileURLWithPath: filePath)
         let fileContents = try FileReader.readFileContents(from: url)
 
@@ -35,6 +35,6 @@ public struct GetConfigValue {
             throw XCConfigError.settingNotFound
         }
 
-        print(echo)
+        return echo
     }
 }
