@@ -11,7 +11,7 @@ public struct GetConfigValue {
         self.setting = setting
     }
 
-    public mutating func run() throws {
+    public func run() throws {
         let url = URL(fileURLWithPath: filePath)
         let fileContents = try FileReader.readFileContents(from: url)
 

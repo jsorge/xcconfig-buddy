@@ -77,7 +77,7 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "get /Users/q1214382/Develop/zulily_ios_main/xcconfig/zulily.xcconfig APPLICATION_VERSION"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "set /Users/q1214382/Develop/zulily_ios_master/xcconfig/Global.xcconfig TEST_VALuE &quot;Spencer&quot; --case-sensitive"
@@ -85,7 +85,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "set /Users/q1214382/Develop/zulily_ios_main/xcconfig/zulily.xcconfig APPLICATION_VERSION &quot;5.38&quot;"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>

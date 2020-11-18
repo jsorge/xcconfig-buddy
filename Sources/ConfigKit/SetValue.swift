@@ -13,7 +13,7 @@ public struct SetConfigValue {
         self.newValue = newValue
     }
 
-    public mutating func run() throws {
+    public func run() throws {
         let url = URL(fileURLWithPath: filePath)
         var fileContents = try FileReader.readFileContents(from: url)
 

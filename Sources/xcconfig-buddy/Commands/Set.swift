@@ -22,7 +22,7 @@ extension XcconfigBuddy {
         var newValue: String
 
         mutating func run() throws {
-            var set = SetConfigValue(caseSensitive: caseSensitive,
+            let set = SetConfigValue(caseSensitive: caseSensitive,
                                      filePath: filePath,
                                      setting: setting,
                                      newValue: newValue)
