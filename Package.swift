@@ -5,15 +5,24 @@ import PackageDescription
 
 let package = Package(
     name: "xcconfig-buddy",
+    products: [
+        .executable(name: "xcconfig-buddy", targets: ["xcconfig-buddy"]),
+        .library(name: "ConfigKit", targets: ["ConfigKit"]),
+    ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.2.0"),
+        .package(url: "https://github.com/apple/swift-argument-parser", .upToNextMinor(from: "0.3.0")),
     ],
     targets: [
         .target(
             name: "xcconfig-buddy",
             dependencies: [
-                .product(name: "ArgumentParser", package: "swift-argument-parser")
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                "ConfigKit",
             ]
+        ),
+        .target(
+            name: "ConfigKit",
+            dependencies: []
         ),
         .testTarget(
             name: "xcconfig-buddyTests",

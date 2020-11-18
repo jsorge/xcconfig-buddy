@@ -1,6 +1,6 @@
 import Foundation
 
-enum XCConfigError: Error {
+public enum XCConfigError: Error {
     case invalidFilepath
     case notXcconfig
     case unreadableFile

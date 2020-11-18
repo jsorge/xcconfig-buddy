@@ -76,16 +76,16 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "set /Users/q1214382/Develop/zulily_ios_master/xcconfig/Global.xcconfig TEST_VALUE &quot;Jared&quot;"
+            argument = "get /Users/q1214382/Develop/zulily_ios_main/xcconfig/zulily.xcconfig APPLICATION_VERSION"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "set /Users/q1214382/Develop/zulily_ios_master/xcconfig/Global.xcconfig TEST_VALuE &quot;Spencer&quot; --case-sensitive"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "get /Users/q1214382/Develop/zulily_ios_master/xcconfig/Global.xcconfig CURRENT_PROJECT_VERSION"
-            isEnabled = "NO">
+            argument = "set /Users/q1214382/Develop/zulily_ios_main/xcconfig/zulily.xcconfig APPLICATION_VERSION &quot;5.38&quot;"
+            isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>

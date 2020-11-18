@@ -1,4 +1,5 @@
 import ArgumentParser
+import ConfigKit
 import Foundation
 
 extension XcconfigBuddy {
@@ -17,28 +18,8 @@ extension XcconfigBuddy {
         var setting: String
 
         mutating func run() throws {
-            let url = URL(fileURLWithPath: filePath)
-            let fileContents = try FileReader.readFileContents(from: url)
-
-            fileContents.enumerateLines(invoking: { [self] text, stop in
-                if self.caseSensitive {
-                    guard text.lowercased().starts(with: self.setting) else { return }
-                } else {
-                    guard text.starts(with: self.setting) else { return }
-                }
-
-                let output = text
-                    .split(separator: "=")
-                    .map { String($0) }
-                    .last?
-                    .trimmingCharacters(in: .whitespaces)
-
-                guard let echo = output else {
-                    throw XCConfigError.settingNotFound
-                }
-
-                print(echo)
-            })
+            var get = GetConfigValue(caseSensitive: caseSensitive, filePath: filePath, setting: setting)
+            try get.run()
         }
     }
 }
