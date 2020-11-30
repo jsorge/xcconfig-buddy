@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "ConfigKit", targets: ["ConfigKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", .upToNextMinor(from: "0.3.0")),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.3.1"),
     ],
     targets: [
         .target(
