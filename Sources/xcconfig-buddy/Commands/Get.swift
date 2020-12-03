@@ -14,7 +14,7 @@ extension XcconfigBuddy {
         @Argument(help: "The path to the config file to modify")
         var filePath: String
 
-        @Argument(help: "The config setting to modify")
+        @Argument(help: "The config setting to fetch")
         var setting: String
 
         mutating func run() throws {

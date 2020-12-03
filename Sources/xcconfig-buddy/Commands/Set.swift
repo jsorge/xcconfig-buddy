@@ -5,7 +5,10 @@ import Foundation
 extension XcconfigBuddy {
     struct Set: ParsableCommand {
         static var configuration = CommandConfiguration(
-            abstract: "Sets the value of a given setting name. If the setting already exists, then the value will be updated. If it's a new setting, it will be appended to the end of the config file."
+            abstract: """
+            Sets the value of a given setting name. If the setting already exists, then the value will be updated. If \
+            it's a new setting, it will be appended to the end of the config file.
+            """
         )
 
         @Flag(name: .shortAndLong,

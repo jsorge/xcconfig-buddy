@@ -7,7 +7,7 @@ public struct XcconfigBuddy: ParsableCommand {
 
         abstract: "A utility for getting and setting values in xcconfig files.",
 
-        subcommands: [Get.self, Set.self]
+        subcommands: [Get.self, Set.self, Increment.self]
     )
 
     public init() {}

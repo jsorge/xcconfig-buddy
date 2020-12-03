@@ -6,4 +6,5 @@ public enum XCConfigError: Error {
     case unreadableFile
     case unwritableFile
     case settingNotFound
+    case settingIsNotIncrementable
 }
