@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "xcconfig-buddy",
+    platforms: [.macOS(.v10_15)],
     products: [
         .executable(name: "xcconfig-buddy", targets: ["xcconfig-buddy"]),
         .library(name: "ConfigKit", targets: ["ConfigKit"]),
