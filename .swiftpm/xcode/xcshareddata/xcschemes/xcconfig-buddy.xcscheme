@@ -76,7 +76,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "get /Users/q1214382/Develop/zulily_ios_main/xcconfig/zulily.xcconfig APPLICATION_VERSION"
+            argument = "sorted /Users/q1214382/Develop/mobile_iosapp/xcconfig/UnitTests/UnitTests-Shared.xcconfig"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
