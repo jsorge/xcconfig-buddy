@@ -15,9 +15,9 @@ public struct IncrementConfigValue {
 
     public func run() throws {
         let getter = GetConfigValue(caseSensitive: caseSensitive, filePath: filePath, setting: setting)
-        let setting = try getter.run()
+        let oldValue = try getter.run()
 
-        guard let asNumber = Int(setting) else {
+        guard let asNumber = Int(oldValue) else {
             throw XCConfigError.settingIsNotIncrementable
         }
 
